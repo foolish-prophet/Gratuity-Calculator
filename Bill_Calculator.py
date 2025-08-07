@@ -31,12 +31,13 @@ def main():
     bill = get_bill()
     gratuity = get_gratuity(bill)
     calculated_gratuity = calc_gratuity(bill, gratuity)
-    bill_total = "{:.2f}".format(total_bill(bill, calculated_gratuity))
+    bill_total = total_bill(bill, calculated_gratuity)
 
 
-    print(f"\n\nYour final bill was: ${bill}")
-    print(f"You decided on a {gratuity}% gratuity.")
-    print(f"Your gratuity is a total of ${calculated_gratuity}.")
-    print(f"Your final bill total is equal to: ${bill_total}")
+    print(f"\n\nYour final bill was: ${bill:.2f}")
+    print(f"You decided on a {gratuity:.2f}% gratuity.")
+    print(f"Your gratuity is a total of ${calculated_gratuity:.2f}.")
+    print(f"Your final bill total is equal to: ${bill_total:.2f}")
 
-main()
+if __name__ == "__main__":
+    main()
